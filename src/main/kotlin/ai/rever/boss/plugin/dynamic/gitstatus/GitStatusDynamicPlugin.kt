@@ -12,7 +12,7 @@ import ai.rever.boss.plugin.api.PluginContext
 class GitStatusDynamicPlugin : DynamicPlugin {
     override val pluginId: String = "ai.rever.boss.plugin.dynamic.gitstatus"
     override val displayName: String = "Git Status (Dynamic)"
-    override val version: String = "1.0.2"
+    override val version: String = "1.0.3"
     override val description: String = "View working tree status and staged changes"
     override val author: String = "Risa Labs"
     override val url: String = "https://github.com/risa-labs-inc/boss-plugin-git-status"
