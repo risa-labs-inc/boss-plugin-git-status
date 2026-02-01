@@ -1,0 +1,21 @@
+{
+  "manifestVersion": 1,
+  "pluginId": "ai.rever.boss.plugin.dynamic.gitstatus",
+  "displayName": "Git Status (Dynamic)",
+  "version": "1.0.0",
+  "apiVersion": "1.0",
+  "mainClass": "ai.rever.boss.plugin.dynamic.gitstatus.GitStatusDynamicPlugin",
+  "type": "panel",
+  "description": "View working tree status and staged changes",
+  "author": "Risa Labs",
+  "url": "https://github.com/risa-labs-inc/boss-plugin-git-status",
+  "panel": {
+    "position": "left_bottom",
+    "priority": 14
+  },
+  "sandbox": {
+    "maxThreads": 4,
+    "maxRestartAttempts": 3,
+    "heartbeatIntervalMs": 5000
+  }
+}
