@@ -4,12 +4,16 @@ import ai.rever.boss.plugin.api.Panel.Companion.left
 import ai.rever.boss.plugin.api.Panel.Companion.bottom
 import ai.rever.boss.plugin.api.PanelId
 import ai.rever.boss.plugin.api.PanelInfo
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Difference
+import compose.icons.FeatherIcons
+import compose.icons.feathericons.GitCommit
 
+/**
+ * Git Status panel info.
+ * Displays changed, staged, and untracked files with staging controls.
+ */
 object GitStatusInfo : PanelInfo {
     override val id = PanelId("git-status", 14)
-    override val displayName = "Git Status"
-    override val icon = Icons.Outlined.Difference
+    override val displayName = "Git Changes"
+    override val icon = FeatherIcons.GitCommit
     override val defaultSlotPosition = left.bottom
 }
