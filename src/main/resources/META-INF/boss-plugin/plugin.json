@@ -4,6 +4,7 @@
   "displayName": "Git Status (Dynamic)",
   "version": "1.0.3",
   "apiVersion": "1.0.3",
+  "minBossVersion": "8.16.22",
   "mainClass": "ai.rever.boss.plugin.dynamic.gitstatus.GitStatusDynamicPlugin",
   "type": "panel",
   "description": "View working tree status and staged changes",
