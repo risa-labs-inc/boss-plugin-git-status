@@ -6,6 +6,7 @@ import ai.rever.boss.plugin.api.GitFileStatusTypeData
 import ai.rever.boss.plugin.scrollbar.getPanelScrollbarConfig
 import ai.rever.boss.plugin.scrollbar.lazyListScrollbar
 import ai.rever.boss.plugin.ui.BossTheme
+import ai.rever.boss.plugin.ui.BossThemeColors
 import androidx.compose.animation.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -226,7 +227,7 @@ private fun ToastMessage(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(if (isError) Color(0xFF5D3A3A) else Color(0xFF3A5D3A))
+            .background(if (isError) BossThemeColors.ErrorColor else BossThemeColors.SuccessColor)
             .padding(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -234,13 +235,13 @@ private fun ToastMessage(
             imageVector = if (isError) Icons.Default.Error else Icons.Default.CheckCircle,
             contentDescription = null,
             modifier = Modifier.size(14.dp),
-            tint = Color.White
+            tint = BossThemeColors.TextPrimary
         )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = message,
             fontSize = 11.sp,
-            color = Color.White,
+            color = BossThemeColors.TextPrimary,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f)
@@ -253,7 +254,7 @@ private fun ToastMessage(
                 imageVector = Icons.Default.Close,
                 contentDescription = "Dismiss",
                 modifier = Modifier.size(12.dp),
-                tint = Color.White.copy(alpha = 0.7f)
+                tint = BossThemeColors.TextPrimary.copy(alpha = 0.7f)
             )
         }
     }
@@ -297,7 +298,7 @@ private fun CleanWorkingTreeMessage() {
                 imageVector = Icons.Outlined.Check,
                 contentDescription = null,
                 modifier = Modifier.size(32.dp),
-                tint = Color(0xFF4CAF50)
+                tint = BossThemeColors.SuccessColor
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
