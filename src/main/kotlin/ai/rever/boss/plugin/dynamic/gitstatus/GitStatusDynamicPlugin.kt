@@ -24,5 +24,11 @@ class GitStatusDynamicPlugin : DynamicPlugin {
         context.panelRegistry.registerPanel(GitStatusInfo) { ctx, panelInfo ->
             GitStatusComponent(ctx, panelInfo, gitDataProvider)
         }
+        // Contribute git_* MCP tools; auto-removed when this plugin is disabled/unloaded.
+        context.registerMcpToolProvider(GitStatusMcpToolProvider(pluginId, gitDataProvider))
+    }
+
+    override fun dispose() {
+        gitDataProvider = null
     }
 }
