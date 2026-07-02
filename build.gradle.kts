@@ -9,7 +9,7 @@ plugins {
 group = "ai.rever.boss.plugin.dynamic"
 // 1.1.0: contributes MCP tools (git_status/stage/unstage/discard/checkout) via
 // boss-plugin-api 1.0.48's McpToolProvider, surfaced on the `boss` MCP server.
-version = "1.1.0"
+version = "1.1.1"
 
 java {
     toolchain {
