@@ -1,5 +1,6 @@
 package ai.rever.boss.plugin.dynamic.gitstatus
 
+import ai.rever.boss.plugin.ui.BossAlertDialog
 import ai.rever.boss.plugin.api.GitDataProvider
 import ai.rever.boss.plugin.api.GitFileStatusData
 import ai.rever.boss.plugin.api.GitFileStatusTypeData
@@ -497,7 +498,7 @@ private fun FileStatusRow(
 
     // Discard confirmation dialog
     if (showDiscardDialog) {
-        AlertDialog(
+        BossAlertDialog(
             onDismissRequest = { showDiscardDialog = false },
             title = { Text("Discard Changes?") },
             text = {
